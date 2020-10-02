@@ -13,7 +13,7 @@
         android:layout_height="100"
         android:layout_marginTop="17dp"
         android:background="@color/btnBackground"
-        android:padding="8"
+        android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/length"
         tools:layout_editor_absoluteX="155dp" />
