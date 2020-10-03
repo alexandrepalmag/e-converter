@@ -18,14 +18,14 @@
         android:background="@color/btnBackground"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/btnDatas"
+        app:layout_constraintEnd_toStartOf="@+id/btnData"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/length" />
 
     <ImageButton
-        android:id="@+id/btnDatas"
+        android:id="@+id/btnData"
         android:layout_width="148dp"
         android:layout_height="148dp"
         android:layout_marginTop="16dp"
@@ -63,7 +63,7 @@
         android:padding="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDatas"
+        app:layout_constraintTop_toBottomOf="@+id/btnData"
         app:srcCompat="@drawable/weight" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

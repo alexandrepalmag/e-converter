@@ -12,8 +12,16 @@ class MainActivity : AppCompatActivity() {
 
         //loading components
         val btnLength = findViewById<ImageButton>(R.id.btnLength)
+        val banData = findViewById<ImageButton>(R.id.btnData)
+
         btnLength.setOnClickListener {
             val intent = Intent(this, ConverterLength::class.java)
+            startActivity(intent)
+        }
+
+
+        banData.setOnClickListener {
+            val intent = Intent(this, ConverterData::class.java)
             startActivity(intent)
         }
     }
