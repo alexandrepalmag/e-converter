@@ -47,44 +47,44 @@ class ConverterData : AppCompatActivity() {
             if (valueSent != "") {
                 when (selection) {
                     0 -> {
-                        var thisText = "Centimeter = "
-                        thisText += Double.parseDouble(valueSent) / 10f
-                        thisText += "cm \nMeter = "
-                        thisText += Double.parseDouble(valueSent) / 1000f
-                        thisText += "m \nKilometer = "
+                        var thisText = " Kilobyte = "
+                        thisText +=  Double.parseDouble(valueSent)/ 1000f
+                        thisText += "kb \n MegaByte = "
                         thisText += Double.parseDouble(valueSent) / 1000000f
-                        thisText += "km"
+                        thisText += "mb \n Gigabyte = "
+                        thisText += Double.parseDouble(valueSent) / 1000000000f
+                        thisText += "gb"
                         txtResult.text = thisText
 
                     }
                     1 -> {
-                        var thisText = "Millimeter = "
-                        thisText += Double.parseDouble(valueSent) * 10f
-                        thisText += "cm \nMeter = "
-                        thisText += Double.parseDouble(valueSent) / 100f
-                        thisText += "m \nKilometer = "
-                        thisText += Double.parseDouble(valueSent) / 100000f
-                        thisText += "km"
+                        var thisText = " Byte = "
+                        thisText +=  Double.parseDouble(valueSent)* 1000f
+                        thisText += "b \n MegaByte = "
+                        thisText += Double.parseDouble(valueSent) / 1000f
+                        thisText += "mb \n GigaByte = "
+                        thisText += Double.parseDouble(valueSent) / 1000000f
+                        thisText += "gb"
                         txtResult.text = thisText
                     }
                     2 -> {
-                        var thisText = "Millimeter = "
+                        var thisText = " Byte = "
+                        thisText +=  Double.parseDouble(valueSent)* 1000000f
+                        thisText += "b \n KiloByte = "
                         thisText += Double.parseDouble(valueSent) * 1000f
-                        thisText += "cm \nCentimeter = "
-                        thisText += Double.parseDouble(valueSent) * 100f
-                        thisText += "m \nKilometer = "
+                        thisText += "kb \n GigaByte = "
                         thisText += Double.parseDouble(valueSent) / 1000f
-                        thisText += "km"
+                        thisText += "gb"
                         txtResult.text = thisText
                     }
                     3 -> {
-                        var thisText = "Millimeter = "
-                        thisText += Double.parseDouble(valueSent) * 100000f
-                        thisText += "cm \nCentimeter = "
-                        thisText += Double.parseDouble(valueSent) * 100000f
-                        thisText += "m \nMeter = "
+                        var thisText = " Byte = "
+                        thisText +=  Double.parseDouble(valueSent)* 1000000000f
+                        thisText += "b \n KiloByte = "
+                        thisText += Double.parseDouble(valueSent) * 1000000f
+                        thisText += "kb \n MegaByte = "
                         thisText += Double.parseDouble(valueSent) * 1000f
-                        thisText += "m"
+                        thisText += "mb"
                         txtResult.text = thisText
                     }
                 }
