@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 
 class ConverterTemperature : AppCompatActivity() {
+    var units = arrayOf("Celsius(C)", "Kelvin(K)", "Fahrenheit(F)")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_converter_temperature)

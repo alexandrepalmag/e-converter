@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 
 class ConverterData: AppCompatActivity() {
+    var units = arrayOf("byte(b)", "kilobyte(kb)", "megabyte(mb)", "gigabyte(gb)")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_converter_datas)

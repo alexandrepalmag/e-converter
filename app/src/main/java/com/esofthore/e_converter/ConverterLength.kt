@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 
 class ConverterLength : AppCompatActivity() {
+    var units = arrayOf("millimeter(mm)", "centimeter(cm)", "meter(m)", "kilometer(km)")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_converter_length)

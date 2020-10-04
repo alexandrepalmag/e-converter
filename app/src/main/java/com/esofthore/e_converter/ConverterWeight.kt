@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 
 class ConverterWeight : AppCompatActivity() {
+    var units = arrayOf("milligram(mg)", "centigram(cg)", "gram(g)", "kilogram(Kg)")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_converter_weight)
