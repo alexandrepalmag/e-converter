@@ -22,7 +22,7 @@ class ConverterLength : AppCompatActivity() {
         val btnConvert = findViewById<Button>(R.id.btnConvert)
 
         //creating Array Adapter
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,units)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, units)
         spinner.adapter = adapter
 
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -45,46 +45,51 @@ class ConverterLength : AppCompatActivity() {
             val valueSent = txtValue.text.toString()
 
             if (valueSent != "") {
-                if (selection == 0) {
-                    var thisText = "Centimeter = "
-                    thisText += Double.parseDouble(valueSent) / 10f
-                    thisText += "cm \nMeter = "
-                    thisText += Double.parseDouble(valueSent) / 1000f
-                    thisText += "m \nKilometer = "
-                    thisText += Double.parseDouble(valueSent) / 1000000f
-                    thisText += "km"
-                    txtResult.text = thisText
+                when (selection) {
+                    0 -> {
+                        var thisText = "Centimeter = "
+                        thisText += Double.parseDouble(valueSent) / 10f
+                        thisText += "cm \nMeter = "
+                        thisText += Double.parseDouble(valueSent) / 1000f
+                        thisText += "m \nKilometer = "
+                        thisText += Double.parseDouble(valueSent) / 1000000f
+                        thisText += "km"
+                        txtResult.text = thisText
 
-                }else if(selection == 1) {
-                    var thisText = "Millimeter = "
-                    thisText += Double.parseDouble(valueSent) * 10f
-                    thisText += "cm \nMeter = "
-                    thisText += Double.parseDouble(valueSent) / 100f
-                    thisText += "m \nKilometer = "
-                    thisText += Double.parseDouble(valueSent) / 100000f
-                    thisText += "km"
-                    txtResult.text = thisText
-                }else if(selection == 2){
-                    var thisText = "Millimeter = "
-                    thisText += Double.parseDouble(valueSent) * 1000f
-                    thisText += "cm \nCentimeter = "
-                    thisText += Double.parseDouble(valueSent) * 100f
-                    thisText += "m \nKilometer = "
-                    thisText += Double.parseDouble(valueSent) / 1000f
-                    thisText += "km"
-                    txtResult.text = thisText
-                }else if(selection == 3) {
-                    var thisText = "Millimeter = "
-                    thisText += Double.parseDouble(valueSent) * 100000f
-                    thisText += "cm \nCentimeter = "
-                    thisText += Double.parseDouble(valueSent) * 100000f
-                    thisText += "m \nMeter = "
-                    thisText += Double.parseDouble(valueSent) * 1000f
-                    thisText += "m"
-                    txtResult.text = thisText
-                }else{
-                    txtResult.text = "Add a value to be converted."
+                    }
+                    1 -> {
+                        var thisText = "Millimeter = "
+                        thisText += Double.parseDouble(valueSent) * 10f
+                        thisText += "cm \nMeter = "
+                        thisText += Double.parseDouble(valueSent) / 100f
+                        thisText += "m \nKilometer = "
+                        thisText += Double.parseDouble(valueSent) / 100000f
+                        thisText += "km"
+                        txtResult.text = thisText
+                    }
+                    2 -> {
+                        var thisText = "Millimeter = "
+                        thisText += Double.parseDouble(valueSent) * 1000f
+                        thisText += "cm \nCentimeter = "
+                        thisText += Double.parseDouble(valueSent) * 100f
+                        thisText += "m \nKilometer = "
+                        thisText += Double.parseDouble(valueSent) / 1000f
+                        thisText += "km"
+                        txtResult.text = thisText
+                    }
+                    3 -> {
+                        var thisText = "Millimeter = "
+                        thisText += Double.parseDouble(valueSent) * 100000f
+                        thisText += "cm \nCentimeter = "
+                        thisText += Double.parseDouble(valueSent) * 100000f
+                        thisText += "m \nMeter = "
+                        thisText += Double.parseDouble(valueSent) * 1000f
+                        thisText += "m"
+                        txtResult.text = thisText
+                    }
                 }
+            } else {
+                txtResult.text = "Add a value to be converted."
             }//end first if
         }//btnConvert.setOnClickListener
 
@@ -93,7 +98,7 @@ class ConverterLength : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item?.itemId == android.R.id.home) {
+        if (item?.itemId == android.R.id.home) {
             finish()
             return true
         }
